@@ -88,17 +88,15 @@ Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà co
 $min = 1;
 $max = 100;
 $total_numbers = 15;
-$ciao = [1];
 
 $arr_numbers = [];
-while (count($arr_numbers) <= $total_numbers){
+while (count($arr_numbers) < $total_numbers){
   $number = rand($min, $max);
-  if (in_array($number, $arr_numbers)){
-    $arr_numbers = $number;
+  if (!in_array($number, $arr_numbers)){
+    $arr_numbers[] = $number;
   }
 }
-
-echo var_dump($arr_numbers);
+var_dump($arr_numbers);
 ?>
 
 <!--Snack 5
