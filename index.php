@@ -47,20 +47,29 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
 $name = $_GET["name"];
 $mail = $_GET["mail"];
 $age = $_GET["age"];
+?>
 
+<h2>Nome</h2>
+<?php
 
-if (strlen($name) > 3) {
+if (strlen($name) > 3){
   echo "accesso riuscito";
 } else {
-  echo "accesso negato" . `<br>`;
+  echo "accesso negato";
 }
+?>
 
-
-if (in_array("@", $mail)){
-  echo "ok";
+<h2>Mail</h2>
+<?php
+if (strpos($mail, "@") !== false && strpos($mail, ".",strpos($mail, "@") !== false)){
+  echo "acesso riuscito";
 } else {
-  "nono";
+  echo "accesso negato";
 }
+?>
+
+<h2>Età</h2>
+<?php 
 
 if (is_numeric($age)){ 
   echo "accesso riuscito";
@@ -72,7 +81,26 @@ if (is_numeric($age)){
 <!--Snack 4
 Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta-->
 
+<h1>Quarto snack</h1>
 
+<?php 
+$min = 1;
+$max = 100;
+$totalNumbers = 15;
+$ciao = [1];
+
+
+$arrNumbers = [];
+while (count($arrNumbers) <= $totalNumbers){
+  $number = rand($min, $max);
+  if (in_array($number, $arrNumbers)){
+    $arrNumbers = $number;
+  }
+}
+
+?>
+
+<?php echo var_dump($arrNumbers) ?>
 
 <!--Snack 5
 Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo.-->
