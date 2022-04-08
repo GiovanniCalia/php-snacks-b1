@@ -50,9 +50,22 @@ $age = $_GET["age"];
 
 
 if (strlen($name) > 3) {
-  echo "tutto ok";
+  echo "accesso riuscito";
 } else {
-  echo "non va bene";
+  echo "accesso negato" . `<br>`;
+}
+
+
+if (in_array("@", $mail)){
+  echo "ok";
+} else {
+  "nono";
+}
+
+if (is_numeric($age)){ 
+  echo "accesso riuscito";
+} else {
+  echo "accesso negato";
 }
 ?>
 
