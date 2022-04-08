@@ -42,6 +42,7 @@ Olimpia Milano - Cantù | 55-60-->
 
 <!--Snack 2
 Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”-->
+
 <h1>Secondo Snack</h1>
 <?php 
 $name = $_GET["name"];
@@ -86,21 +87,19 @@ Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà co
 <?php 
 $min = 1;
 $max = 100;
-$totalNumbers = 15;
+$total_numbers = 15;
 $ciao = [1];
 
-
-$arrNumbers = [];
-while (count($arrNumbers) <= $totalNumbers){
+$arr_numbers = [];
+while (count($arr_numbers) <= $total_numbers){
   $number = rand($min, $max);
-  if (in_array($number, $arrNumbers)){
-    $arrNumbers = $number;
+  if (in_array($number, $arr_numbers)){
+    $arr_numbers = $number;
   }
 }
 
+echo var_dump($arr_numbers);
 ?>
-
-<?php echo var_dump($arrNumbers) ?>
 
 <!--Snack 5
 Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo.-->
