@@ -102,6 +102,22 @@ var_dump($arr_numbers);
 <!--Snack 5
 Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo.-->
 
+<h1>Quinto snack</h1>
 
+<?php 
+$paragraph = "Lorem ipsum dolor sit amet. consectetur adipisicing elit. Voluptatibus praesentium sequi dolores veritatis veniam reiciendis atque commodi at dolorum quod. molestias aliquid ducimus. Odit amet hic deserunt blanditiis molestias aliquid!";
+
+echo $paragraph;
+?>
+
+<h2>Testi tagliati</h2>
+
+<?php
+$cut = explode(".", $paragraph);
+echo $cut[0] . "<br>";
+echo $cut[1] . "<br>";
+echo $cut[2] . "<br>";
+echo $cut[3] . "<br>";
+?>
 </body>
 </html>
