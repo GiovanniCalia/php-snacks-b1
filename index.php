@@ -105,7 +105,7 @@ Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il pa
 <h1>Quinto snack</h1>
 
 <?php 
-$paragraph = "Lorem ipsum dolor sit amet. consectetur adipisicing elit. Voluptatibus praesentium sequi dolores veritatis veniam reiciendis atque commodi at dolorum quod. molestias aliquid ducimus. Odit amet hic deserunt blanditiis molestias aliquid!";
+$paragraph = "Lorem ipsum dolor sit amet. Consectetur adipisicing elit. Voluptatibus praesentium sequi dolores veritatis veniam reiciendis atque commodi at dolorum quod. Molestias aliquid ducimus. Odit amet hic deserunt blanditiis molestias aliquid!";
 
 echo $paragraph;
 ?>
@@ -118,6 +118,7 @@ echo $cut[0] . "<br>";
 echo $cut[1] . "<br>";
 echo $cut[2] . "<br>";
 echo $cut[3] . "<br>";
+echo $cut[4] . "<br>";
 ?>
 </body>
 </html>
