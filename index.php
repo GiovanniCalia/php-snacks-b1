@@ -114,11 +114,10 @@ echo $paragraph;
 
 <?php
 $cut = explode(".", $paragraph);
-echo $cut[0] . "<br>";
-echo $cut[1] . "<br>";
-echo $cut[2] . "<br>";
-echo $cut[3] . "<br>";
-echo $cut[4] . "<br>";
+for ($_i = 0; $_i < count($cut); $_i++){
+  echo $cut[$_i] . "<br>";
+}
+
 ?>
 </body>
 </html>
