@@ -96,7 +96,7 @@ while (count($arr_numbers) < $total_numbers){
     $arr_numbers[] = $number;
   }
 }
-var_dump($arr_numbers);
+var_export($arr_numbers);
 ?>
 
 <!--Snack 5
