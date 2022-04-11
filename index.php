@@ -44,40 +44,33 @@ Olimpia Milano - Cantù | 55-60-->
 Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”-->
 
 <h1>Secondo Snack</h1>
+
+<form action="" method="get">
+  <input type="text" name="name">
+  <input type="text" name="mail">
+  <input type="text" name="age">
+  <button>Invia</button>
+</form>
+
 <?php 
-$name = $_GET["name"];
-$mail = $_GET["mail"];
-$age = $_GET["age"];
+$name = $_GET["name"] ?? "";
+$mail = $_GET["mail"] ?? "";
+$age = $_GET["age"] ?? "";
 ?>
 
-<h2>Nome</h2>
 <?php
 
-if (strlen($name) > 3){
-  echo "accesso riuscito";
+if (
+  strlen($name) > 3 &&
+  strpos($mail, "@") !== false && strpos($mail, ".",strpos($mail, "@") !== false) &&
+  is_numeric($age)){
+  $result = '<h3 style="color:green;">Accesso riuscito</h3>';
 } else {
-  echo "accesso negato";
+  $result = '<h3 style="color:red;">Accesso negato</h3>';
 }
 ?>
 
-<h2>Mail</h2>
-<?php
-if (strpos($mail, "@") !== false && strpos($mail, ".",strpos($mail, "@") !== false)){
-  echo "acesso riuscito";
-} else {
-  echo "accesso negato";
-}
-?>
-
-<h2>Età</h2>
-<?php 
-
-if (is_numeric($age)){ 
-  echo "accesso riuscito";
-} else {
-  echo "accesso negato";
-}
-?>
+<?= $result ?>
 
 <!--Snack 4
 Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta-->
@@ -115,7 +108,7 @@ echo $paragraph;
 <?php
 $cut = explode(".", $paragraph);
 for ($_i = 0; $_i < count($cut); $_i++){
-  echo $cut[$_i] . "<br>";
+  echo $cut[$_i] . "." . "<br>";
 }
 
 ?>
